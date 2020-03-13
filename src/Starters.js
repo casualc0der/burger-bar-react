@@ -8,6 +8,27 @@ import garlicMushrooms from './images/garlic_mushrooms.jpg'
 import nachos from './images/nachos.jpg'
 import wedges from './images/wedges.jpg'
 import chickstrips from './images/chickstrips.jpg'
+import burger1 from './images/burger1.jpg'
+import burger2 from './images/burger2.jpg'
+import burger3 from './images/burger3.jpg'
+import burger4 from './images/burger4.jpg'
+import burger5 from './images/burger5.jpg'
+import burger6 from './images/burger6.jpg'
+import burger7 from './images/burger7.jpg'
+import burger8 from './images/burger8.jpg'
+import burger9 from './images/burger9.jpg'
+import burger10 from './images/burger10.jpg'
+import eton from './images/eton.jpg'
+import choccake from './images/choccake.jpg'
+import mudpie from './images/mudpie.jpg'
+import trifle from './images/trifle.jpeg'
+import bocker from './images/bocker.jpg'
+import bud from './images/bud.jpg'
+import coors from './images/coors.jpg'
+import pepsi from './images/pepsi.jpeg'
+import gin from './images/gin.jpg'
+import vodka from './images/vodka.jpeg'
+
 
 const images = {
 
@@ -17,6 +38,26 @@ const images = {
   nachos: nachos,
   wedges: wedges,
   chickstrips: chickstrips,
+  burger1: burger1,
+  burger2: burger2,
+  burger3: burger3,
+  burger4: burger4,
+  burger5: burger5,
+  burger6: burger6,
+  burger7: burger7,
+  burger8: burger8,
+  burger9: burger9,
+  burger10: burger10,
+  eton: eton,
+  choccake: choccake,
+  mudpie: mudpie,
+  trifle: trifle,
+  bocker: bocker,
+  bud: bud,
+  coors: coors,
+  pepsi: pepsi,
+  gin: gin,
+  vodka: vodka
 
 }
 
@@ -56,19 +97,24 @@ class Starters extends Component{
 
  
   render(){
-    if(this.props.display === false) {
+
+    const nameTitle = this.props.display.name;
+    const nameFormatted = nameTitle.charAt(0).toUpperCase() + nameTitle.slice(1)
+
+    
+    if(this.props.display.disp === false) {
       return null;
     }
     else {
       return ( 
         <div id="starters-main">
-        <h1>Starters </h1>
+        <h1>{nameFormatted} </h1>
        <StarterList>
 
        <Grid size={10}>
         
 
-        {menuList.starters.map((e) => {
+        {menuList[this.props.display.name].map((e) => {
        
           return (
             <Grid.Unit key={e.key} size={{mobile: 1, tablet: 1 / 2, desktop: 1/ 2,}}> 

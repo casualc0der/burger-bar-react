@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
 import burger2 from './burger2.jpg'
 import Starters from './Starters'
-import Mains from './Mains'
-import Dessert from './Dessert'
-import Drinks from './Drinks'
+
 
 
 
@@ -12,10 +10,10 @@ class Menu extends Component{
 constructor(props) {
   super(props);
   this.state ={
-    starterDisplay: false,
-    mainsDisplay: false,
-    dessertDisplay: false,
-    drinksDisplay: false,
+    starterDisplay: {disp: false, name : 'starters'},
+    mainsDisplay: {disp: false, name : 'mains'},
+    dessertDisplay: {disp: false, name : 'dessert'},
+    drinksDisplay: {disp: false, name : 'drinks'},
   }
 
   this.startersClick = this.startersClick.bind(this)
@@ -28,10 +26,10 @@ constructor(props) {
 
 switchDisplayFlag() {
   this.setState({
-    starterDisplay: false,
-    mainsDisplay: false,
-    dessertDisplay: false,
-    drinksDisplay: false,
+    starterDisplay: {disp: false, name : 'starters'},
+    mainsDisplay: {disp: false, name : 'mains'},
+    dessertDisplay: {disp: false, name : 'dessert'},
+    drinksDisplay: {disp: false, name : 'drinks'},
     basket: [],
   })
 }
@@ -40,7 +38,7 @@ switchDisplayFlag() {
 startersClick(){
   this.switchDisplayFlag()
   this.setState({
-    starterDisplay: true,
+    starterDisplay: {disp: true, name: 'starters'},
   })
 }
 
@@ -48,7 +46,7 @@ mainsClick(){
   this.switchDisplayFlag()
   this.setState({
     
-    mainsDisplay: true,
+    mainsDisplay: {disp: true, name: 'mains'},
   })
 }
 
@@ -56,7 +54,7 @@ dessertClick() {
   this.switchDisplayFlag() 
   this.setState({
 
-    dessertDisplay: true
+    dessertDisplay: {disp: true, name: 'dessert'},
   })
 }
 
@@ -64,7 +62,7 @@ drinksClick() {
   this.switchDisplayFlag()
   this.setState({
 
-    drinksDisplay: true
+    drinksDisplay: {disp: true, name: 'drinks'},
   })
 }
 //#endregion
@@ -97,10 +95,10 @@ render(){
         </nav>
 
         <div id="menu-display">
-          <Starters display ={this.state.starterDisplay } getItem ={this.receiveDataFromMenuItem } />
-          <Mains display = { this.state.mainsDisplay} />
-          <Dessert display = { this.state.dessertDisplay} />
-          <Drinks display = { this.state.drinksDisplay}  />
+          <Starters display = {this.state.starterDisplay } />
+          <Starters display = { this.state.mainsDisplay} />
+          <Starters display = { this.state.dessertDisplay} />
+          <Starters display = { this.state.drinksDisplay}  />
 
         </div>
 </div>
