@@ -1,42 +1,24 @@
-#main {
+#menu-main {
 
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
   
- 
-}
-
-
-#header-info {
-  width: 70em;
- 
-
+  font-family: 'Roboto', sans-serif;
+  
 
 }
-.carr {
+
+#menu-burgers {
 
   width: 100%;
-  height: auto;
-  padding-bottom: -100px;
- 
- 
-
-}
-#nav-bar {
-
-
-  width: 100%;
-  display: flex;
-  margin-bottom: 1.5em;
-  
-  
-
-  
+  height: 200px;
 }
 
-.nav-options {
+.menu-nav-options {
   
   padding: 0;
   margin: 0;
@@ -44,12 +26,16 @@
   display: flex;
   list-style: none;
   height: 100%;
- 
- 
+  justify-content: space-between;
   
 }
 
-.nav-list {
+#menu-display {
+
+  margin: 20px 0px 20px 0px;
+}
+
+.menu-nav-list {
   display: flex;
   width: 100%;
   height: 100%;
@@ -66,13 +52,13 @@
   box-shadow: 3px 7px;
 }
 
-.nav-list:hover {
+.menu-nav-list:hover {
 
   background-color:rgb(254, 78, 78);
   cursor: pointer;
 }
 
-.nav-list:active {
+.menu-nav-list:active {
   background-color:rgb(254, 78, 78);
   cursor: pointer;
   box-shadow: 0px 1px;
@@ -81,34 +67,7 @@
 
 }
 
-.overlay {
-  position: absolute;
- top: 0px;
- left: 0px;
-  width: 100%;
-  background-color: hsla(0, 0%, 0%, .55);
-  height: 100%;
-}
-
-
-
-#hero-button {
-
- width: 40%;
- 
-}
-
-.carr-text {
- 
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
- 
-
-}
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   #header-info {
     width: 100%;
    
@@ -122,23 +81,23 @@
   
   }
 
-  .nav-list {
-    margin: 5px 0px 5px 0px ;
-    box-shadow: 0px 0px;
+  .menu-nav-list {
+    margin: 10px 0px 10px 0px ;
+    font-size: 1em;
+    
+
   }
 
-  .nav-options {
-
-    flex-direction: column;
-    flex-wrap: wrap;
+  .menu-nav-options {
+    width: 100%;
     
   }
 
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
   #header-info {
-    width: 700px;
+    width: 900px;
   
   }
   .carr {
