@@ -76,9 +76,8 @@ render(){
     else{
       return (
         <div id="menu-main">
-        <h1>Menu</h1>
-
         <div id="menu-head-pic">
+        <h1 id=" menu-title">Menu</h1>
         <img id ='menu-burgers' alt="3 hamburgers from eddies menu" src={ burger2 } />
         </div>
 

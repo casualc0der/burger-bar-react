@@ -92,7 +92,13 @@ margin-top: 20px;
 font-size:3em;
 
 `
+const StarterButton = styled.button`
+background-color: #FF1493;
+font-size: 0.4em;
+box-shadow: 3px 7px;
+height: 1.7em;
 
+`
 class Starters extends Component{
 
  
@@ -125,7 +131,7 @@ class Starters extends Component{
             <StarterText>
             <h6>{e.name}</h6>
             <h6>{e.price}</h6>
-            <button>Order</button>
+            <StarterButton >Order</StarterButton>
             </StarterText>
             </StarterCard>
             </Grid.Unit>

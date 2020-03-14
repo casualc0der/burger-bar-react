@@ -12,7 +12,7 @@ class Order extends Component{
 
       return (
         <div>
-        <h1>Order Here</h1>
+        <h1>Coming Soon</h1>
         </div>
       )
     }
