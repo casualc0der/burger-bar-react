@@ -10,7 +10,7 @@ class Menu extends Component{
 constructor(props) {
   super(props);
   this.state ={
-    starterDisplay: {disp: false, name : 'starters'},
+    starterDisplay: {disp: true, name : 'starters'},
     mainsDisplay: {disp: false, name : 'mains'},
     dessertDisplay: {disp: false, name : 'dessert'},
     drinksDisplay: {disp: false, name : 'drinks'},
@@ -78,8 +78,24 @@ render(){
         <div id="menu-main">
         <div id="menu-head-pic">
         <h1 id=" menu-title">Menu</h1>
-        <img id ='menu-burgers' alt="3 hamburgers from eddies menu" src={ burger2 } />
+        {/* <img id ='menu-burgers' alt="3 hamburgers from eddies menu" src={ burger2 } /> */}
         </div>
+
+        <div id="home-main" 
+        style={{  
+        backgroundImage: `url(${burger2})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+}}>     </div>
+
+<div id="home-main2" 
+        style={{  
+        backgroundImage: `url(${burger2})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+}}>     </div>
 
         <nav id="burg-menu-nav">
         <ul className="menu-nav-options">

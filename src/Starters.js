@@ -67,6 +67,7 @@ const StarterList = styled.div`
 width:100%;
 
 
+
 `
 const StarterCard = styled.div`
 
@@ -75,6 +76,8 @@ margin: 5px;
 border-style: solid;
 border-color: black;
 border-width: 2px;
+background-color: white;
+box-shadow: 3px 7px;
 
 
 `
@@ -83,6 +86,7 @@ const ImageCard = styled.img`
 height: 200px;
 width: 200px;
 border-radius: 50%;
+box-shadow: 3px 7px;
 
 
 `
@@ -126,7 +130,7 @@ class Starters extends Component{
             <Grid.Unit key={e.key} size={{mobile: 1, tablet: 1 / 2, desktop: 1/ 2,}}> 
             <StarterCard >
          
-            <ImageCard src={images[`${e.image}`]} alt={e.name}/>
+            <ImageCard className='imgCard' src={images[`${e.image}`]} alt={e.name}/>
           
             <StarterText>
             <h6>{e.name}</h6>

@@ -75,7 +75,7 @@
 }
 
 .nav-list:active {
-  background: repeating-linear-gradient(45deg, #FF1493 , #FF1493 20px, transparent 20px,transparent 40px );
+  background: repeating-linear-gradient(45deg, #FF1493 , #FF1493 20px, white 20px,white 40px );
   cursor: pointer;
   box-shadow: 0px 1px;
   transform: translateY(3px);
