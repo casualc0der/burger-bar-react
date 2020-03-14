@@ -93,12 +93,19 @@ box-shadow: 3px 7px;
 
 const StarterText = styled.div`
 margin-top: 20px;
-font-size:3em;
+font-size:  large;
+
+`
+
+const StarterTitles = styled.h5`
+font-size:  2em;
+
+
 
 `
 const StarterButton = styled.button`
 background-color: #FF1493;
-font-size: 0.4em;
+font-size: large;
 box-shadow: 3px 7px;
 height: 1.7em;
 
@@ -130,10 +137,12 @@ class Starters extends Component{
             <Grid.Unit key={e.key} size={{mobile: 1, tablet: 1 / 2, desktop: 1/ 2,}}> 
             <StarterCard >
          
+            <StarterText>
+            <StarterTitles>{e.name}</StarterTitles>
+            </StarterText>
             <ImageCard className='imgCard' src={images[`${e.image}`]} alt={e.name}/>
           
             <StarterText>
-            <h6>{e.name}</h6>
             <h6>{e.price}</h6>
             <StarterButton >Order</StarterButton>
             </StarterText>
