@@ -1,4 +1,5 @@
 {
+  "homepage": "https://casualc0der.github.io/burger-bar-react/",
   "name": "burger-bar",
   "version": "0.1.0",
   "private": true,
@@ -18,6 +19,8 @@
     "uuid": "^7.0.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "gh-pages": "^2.2.0",
     "styled-components": "^5.0.1",
     "styled-components-breakpoint": "^3.0.0-preview.20"
   }

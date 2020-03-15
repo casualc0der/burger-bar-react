@@ -114,8 +114,7 @@ class Starters extends Component{
   constructor(props){
     super(props)
   
-  
-  
+
   this.addBAZKET = this.addBAZKET.bind(this)
   }
 
