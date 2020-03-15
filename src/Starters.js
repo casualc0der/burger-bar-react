@@ -86,7 +86,7 @@ const ImageCard = styled.img`
 height: 200px;
 width: 200px;
 border-radius: 50%;
-box-shadow: 3px 7px;
+${'' /* box-shadow: 3px 7px; */}
 
 
 `
@@ -111,8 +111,23 @@ height: 1.7em;
 
 `
 class Starters extends Component{
+  constructor(props){
+    super(props)
+  
+  
+  
+  this.addBAZKET = this.addBAZKET.bind(this)
+  }
+
+  
+
+ addBAZKET(props) {
+
+  this.props.addToBasket(props)
+ }
 
  
+
   render(){
 
     const nameTitle = this.props.display.name;
@@ -144,7 +159,8 @@ class Starters extends Component{
           
             <StarterText>
             <h6>{e.price}</h6>
-            <StarterButton >Order</StarterButton>
+            <StarterButton onClick={ () => this.addBAZKET(e.name) } >Order</StarterButton>
+
             </StarterText>
             </StarterCard>
             </Grid.Unit>

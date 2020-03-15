@@ -110,10 +110,10 @@ render(){
         </nav>
 
         <div id="menu-display">
-          <Starters display = {this.state.starterDisplay } />
-          <Starters display = { this.state.mainsDisplay} />
-          <Starters display = { this.state.dessertDisplay} />
-          <Starters display = { this.state.drinksDisplay}  />
+          <Starters display = {this.state.starterDisplay } addToBasket={() => this.props.addToBasket()} />
+          <Starters display = { this.state.mainsDisplay} addToBasket={() => this.props.addToBasket()} />
+          <Starters display = { this.state.dessertDisplay} addToBasket={() => this.props.addToBasket()} />
+          <Starters display = { this.state.drinksDisplay} addToBasket={() => this.props.addToBasket() }/>
 
         </div>
 </div>

@@ -29,6 +29,7 @@ class App extends Component{
     this.orderClick = this.orderClick.bind(this);
     this.homeClick = this.homeClick.bind(this)
     this.clearDisplay = this.clearDisplay.bind(this)
+    this.addToBasket = this.addToBasket.bind(this)
   }
 
   clearDisplay(){
@@ -76,6 +77,18 @@ class App extends Component{
 
     })
   }
+
+  addToBasket(props) {
+    console.log('slaps')
+    let currentState = this.state.myBasket
+    currentState.push(props)
+    console.log(this.state.myBasket)
+    this.setState({
+    myBasket: currentState
+    
+       
+    })
+  }
   render(){
 
     return (
@@ -92,7 +105,7 @@ class App extends Component{
       </nav>
       <Home display = { this.state.displayHome } />
       <About display = {this.state.displayAbout}/>
-      <Menu display = {this.state.displayMenu} />
+      <Menu display = {this.state.displayMenu} addToBasket={ () => this.addToBasket()} />
       <Order display ={this.state.displayOrder} />
       
 
