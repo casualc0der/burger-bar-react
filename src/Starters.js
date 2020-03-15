@@ -117,9 +117,6 @@ class Starters extends Component{
 
   this.addBAZKET = this.addBAZKET.bind(this)
   }
-
-  
-
  addBAZKET(props) {
 
   this.props.addToBasket(props)
